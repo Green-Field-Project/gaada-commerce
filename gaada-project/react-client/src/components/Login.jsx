@@ -11,7 +11,7 @@ console.log(props, "props login");
         axios.get('/login', {username, password}).then(result=>{
             if (result.data.length > 0) {
             props.updateView();
-            console.log(`welcome ${username}`);
+            console.log(`welcome ${username}`); 
             } else alert("wrong username/password !")
             }).catch(err=>{
             console.log(err);
