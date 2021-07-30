@@ -1,4 +1,89 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css?family=Francois+One|PT+Serif:400,400i,700,700i');
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.button-os{
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgb(207, 207, 207);
+}
+
+.button-os:hover{
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 8px #f9f8fc;
+  } 
+
+ #foot{
+  position: relative;
+  top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #d9d4e7;
+  width: 150px;
+  height: 65px;
+  background-color: #d9d4e7;
+  animation-duration: 5s;
+}
+
+.button-os{
+   position: absolute;
+    width: 200px;
+    height: 65px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #f9f8fc;
+    border: 2.5px solid #0e172c;
+    transition: background-color 2.2s;
+    transition-duration: 3s;
+    transition: 1.5s;
+  }
+  
+  .button-os:hover{
+    position: absolute;
+    top: 30px;
+    background-color: #fec7d7;
+  }
+  
+  .button-os a{
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color:#0e172c;
+    transition: 1.5s;
+  }
+  
+  .button-os a:hover{
+    letter-spacing: 5px;
+  }
+
 
 body {
   font-family: 'PT Serif', sans-serif;
@@ -6,7 +91,10 @@ body {
   color: #2C3E50;
   background-color: #ECF0F1;
   font-size: 1.1em;
+
 }
+
+
 
 h2 {
   color: #2C3E50;

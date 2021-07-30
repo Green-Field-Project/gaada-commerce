@@ -5,6 +5,7 @@ import Home from "./Home.jsx";
 import Profile from "./Profile.jsx"
 import Field from "./Field.jsx"
 import Basket from "./Basket.jsx"
+import Ticket from "./Ticket.jsx"
 import axios from "axios";
 
 export default class App extends React.Component {
@@ -72,7 +73,7 @@ export default class App extends React.Component {
     if (view === "home") {
       return <Home items={items} changeView={this.changeView} basket={basket}/>;
     } else if (view === "login") {
-      return <Login handleChange={()=> this.changeView('field')}/>;
+      return <Login handleChange={()=> this.changeView('profil')}/>;
     } else if (view === "sign up") {
       return <Signup handleChange={()=> this.changeView('field')} />;
     }
@@ -81,8 +82,10 @@ export default class App extends React.Component {
     }
     else if (view === "profil"){
       return <Profile users={this.state.users} items={this.state.items} />
+    }else if(view === "basket") {
+     return <Basket basket={this.state.basket} changeView={this.changeView}/>
     }else{
-     return <Basket basket={this.state.basket}/>
+      return <Ticket />
     }
   }
 

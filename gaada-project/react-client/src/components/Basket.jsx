@@ -16,14 +16,6 @@ class Basket extends React.Component {
   }
 
   render() {
-    //  this.props.basket
-    // var add = (arr) =>{
-    //     var res = 0
-    //     for(var i =0; i<arr.length;i++){
-    //       res+=arr[i].price
-    //     }
-    //     return res
-    //     }
     return (
       <div>
         {/* {console.log(props.basket)} */}
@@ -36,10 +28,12 @@ class Basket extends React.Component {
           </div>
         ))}
         <div>
-          <div>
+          {/* <div>
             <h3>Ko77 : </h3>
             {this.props.basket.reduce((acc, elm, i) => acc + elm.price, 0)}$
-          </div>
+          </div> */}
+ <button id="foot" onClick={()=>this.props.changeView('ticket')}><button className="button-os"><a href="#">Get Your Ticket</a></button></button>
+
         </div>
       </div>
     );
