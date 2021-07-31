@@ -139,9 +139,6 @@ export default class Create extends React.Component {
 
         <button onClick={() => this.add()}>Add it</button>
         <button onClick={() => this.add()}>Update</button>
-        {/* <div>
-              {console.log('heyyyyyyyyyyy',this.state.items)} 
-         </div> */}
       </div>
     );
   }

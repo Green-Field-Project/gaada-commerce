@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-// import Profile from './Profile.jsx';
 
 export default class Field  extends React.Component {
   constructor(props){
@@ -13,9 +12,7 @@ export default class Field  extends React.Component {
       this.handleChangeImage = this.handleChangeImage.bind(this)
       this.userAdd = this.userAdd.bind(this)
   }
-// componentWillUnmount(){
-//     this.userAdd()
-// }
+
 
 handleChangeImage(e){
     this.setState({
@@ -31,8 +28,6 @@ axios.put(`/api/user/${id}`, this.state)
 })
 .then(()=>{
     this.props.changeView('profil')
-//  location.reload()
-
 })
 
 

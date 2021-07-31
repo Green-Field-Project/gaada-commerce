@@ -4,29 +4,14 @@ export default class Ticket extends React.Component {
   render() {
     return (
       <div>
-        {/* <!-- Chrome Tested Only -->
-<!-- This project is just for fun, so I'm not spending the time trying to make it perfect across all browsers. Mobile probably doesnt work -->
-
-
-<!-- 
-	Netlify Link: 
-	https://cvs-receipt.netlify.com  
-	better for mobile 🤷
--->
-
-
-<!-- To Do:
--Make ExtraCard Bucks --> */}
-
         <div id="showScroll" className="container">
           <div className="receipt">
-            <h1 className="logo1">CVS/pharmacy</h1>
+            <h1 className="logo1">Gaada-Commerce</h1>
             <div className="address">666 Lincoln St. Santa Monica, CA</div>
             <div className="transactionDetails">
               <div className="detail">Reg#17</div>
               <div className="detail">TRN#1313</div>
               <div className="detail">CSHR#00097655</div>
-              {/* <div className="detail">str#9852</div> */}
             </div>
             <div className="transactionDetails">Helped by: Garrett</div>
             <div className="centerItem bold">
@@ -109,16 +94,6 @@ export default class Ticket extends React.Component {
               {/* <!--       start coupon --> */}
               <div className="couponContainer">
                 <h1 className="logo">CVS/pharmacy</h1>
-                {/* <div className="discount">$2.00 off</div>
-				<div className="discountDetails">$2.00 off COLEGATE Toothbrush, Toothpaste, or Mouthwash</div>
-				<div className="expiration">
-					<div className="item bold">
-						Expires 12/12/2018
-					</div>
-					<div className="item">
-						Up to $2 Value */}
-                {/* </div> */}
-                {/* </div> */}
                 <div className="barcode">
                   <h3>Ko77 : </h3>
                   {this.props.basket.reduce(
@@ -145,10 +120,13 @@ export default class Ticket extends React.Component {
                   <p>CPN#: 85887</p>
                 </div>
               </div>
-              {/* <!--       end coupon --> */}
             </div>
           </div>
         </div>
+
+        <div>
+          <button onClick={()=>this.props.changeView('home')} >Print</button>
+          </div>
       </div>
     );
   }

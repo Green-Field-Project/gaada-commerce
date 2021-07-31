@@ -48,23 +48,9 @@ export default class App extends React.Component {
   }
 
   changeView(option) {
-   
-
-    // axios.get(`/api/user/${this.state.user._id}`)
-    // .then((res) => {
-    //   this.setState({
-    //     user: res.data
-    //   });
-    //   console.log('----gett', this.state.user)
-    // })
-    // .then((res)=>{
       this.setState({
         view: option,
       });
-    // })
-    // .catch((err)=>{
-    //   console.log(err)
-    // })
   }
 
   renderView() {
@@ -85,7 +71,7 @@ export default class App extends React.Component {
     }else if(view === "basket") {
      return <Basket basket={this.state.basket} changeView={this.changeView}/>
     }else{
-      return <Ticket basket={this.state.basket}/>
+      return <Ticket basket={this.state.basket} changeView={this.changeView}/>
     }
   }
 
@@ -99,10 +85,6 @@ export default class App extends React.Component {
           className="logo"
           style={{cursor:"pointer"}}
           onClick={() => this.changeView("home")}> Ga3da commerce </span>
-            {/* <span>
-              <input type="text" />
-              <button>search</button>
-            </span> */}
           <span
             className={
               this.state.view === "home" ? "nav-selected" : "nav-unselected"

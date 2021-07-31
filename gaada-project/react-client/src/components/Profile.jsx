@@ -42,10 +42,6 @@ delete(id){
       <img className="card-image1" src={elm.imageUrl} alt="item image" />
 
       <h3>{elm.itemName}</h3>
-          {/* <h5>{elm.itemType}</h5>
-          <h5>{elm.price}</h5>
-          <h5>{elm.itemDescription}</h5>
-          <h5>{elm.quantity}</h5> */}
           <button onClick={()=>this.delete(elm._id)}>Delete </button>
           </div>
           </div>
