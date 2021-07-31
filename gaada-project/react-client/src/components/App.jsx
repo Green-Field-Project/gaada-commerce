@@ -85,7 +85,7 @@ export default class App extends React.Component {
     }else if(view === "basket") {
      return <Basket basket={this.state.basket} changeView={this.changeView}/>
     }else{
-      return <Ticket />
+      return <Ticket basket={this.state.basket}/>
     }
   }
 

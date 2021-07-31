@@ -41,9 +41,28 @@ axios.put(`/api/user/${id}`, this.state)
     render(){
         return(
             <div>
-               
-                Your Image : <input type="text" onChange={(e)=>this.handleChangeImage(e)}/>
-                <button onClick={()=>this.userAdd()}>JOIN</button>
+               <link
+          href="https://fonts.googleapis.com/css?family=Roboto"
+          rel="stylesheet"
+        />
+        <div className="form__group">
+          <input
+            type="text"
+            className="form__input"
+            id="name"
+            placeholder="Your Image "
+            required=""
+            onChange={(e)=>this.handleChangeImage(e)}
+          />
+          <label htmlFor="name" className="form__label">
+          Your Image  
+          </label>
+          </div>
+          <button id="foot" onClick={()=>this.userAdd()}>
+            <button className="button-os">
+              <a href="#">JOIN</a>
+            </button>
+          </button>
             </div>
         )
     }
