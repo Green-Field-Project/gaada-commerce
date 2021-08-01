@@ -22,12 +22,12 @@ const Login=(props)=>{
 
 
     return(
-        <div>
+        <div id="loginContainer">
             <form id="loginForm" onSubmit={()=>{
                 login();
                 props.changeView
             }}>
-                <h3>Login</h3>
+                <h3 id="signin" >Login</h3>
                 <br />
                 <label id="emailLabel"> Email </label> <br />
                 <input id="emailInput" type="text" placeholder="email@example.com" 
@@ -38,7 +38,7 @@ const Login=(props)=>{
                 onChange={(e)=>{ setPassword(e.target.value)}} />
                 <br />
                 <button id="loginBtn" type="submit"> Login </button>
-                <button onClick={()=>{props.changeView('home')}} >Exit</button>
+                <button id="cancelBtn" onClick={()=>{props.changeView('home')}} >Exit</button>
                 <br />
                 <br />
                 <h6>forgot password? </h6>

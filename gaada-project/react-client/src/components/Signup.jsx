@@ -26,12 +26,12 @@ const Signup=(props)=>{
     }
 
     return(
-        <div>
+        <div id="signupContainer">
             <form id="SignUpForm" onSubmit={signup}>
-                <h3>Sign Up</h3>
+                <h3 id="signin" >Sign Up</h3>
                 <br />
                 <label id="nameLabel"> Name </label> <br />
-                <input id="nameInput" type="name" placeholder="enter your name"
+                <input id="nameInput" type="text" placeholder="enter your name"
                 onChange={(e)=>{
                     setUsername(e.target.value)
                 }}
@@ -53,7 +53,7 @@ const Signup=(props)=>{
                 <br />
                 <br />
                 <button id="signUpBtn" type='submit'> Sign Up </button>
-                <button onClick={()=>{props.changeView('home')}} >Exit</button>
+                <button id="cancelBtn" onClick={()=>{props.changeView('home')}} >Exit</button>
             </form>
         </div>
     )

@@ -100,6 +100,18 @@ app.put('/api/user/:id', async (req, res) =>{
   }
 })
 
+app.put('/user/image/:id', (req, res)=>{
+  User.findOneAndUpdate({id: req.params._id}, {image: req.body.image}
+    ,function(err, result){
+      if (err){
+        res.send(err)
+      } else {
+        res.send(result)
+      }
+    }
+    )
+})
+
 app.delete('/items/:id', async(req,res)=>{
   try{
 var item = await Item.findOneAndRemove(req.params._id)

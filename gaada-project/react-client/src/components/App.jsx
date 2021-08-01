@@ -76,6 +76,8 @@ export default class App extends React.Component {
     })
   }
 
+  
+
   changeView(option) {
       this.setState({
         view: option,
@@ -122,33 +124,36 @@ export default class App extends React.Component {
       <div>
         <div className="nav">
           <span 
-          className="logo"
-          style={{cursor:"pointer"}}
-          onClick={() => this.changeView("home")}> Ga3da commerce </span>
+            className="logo"
+            style={{cursor:"pointer"}}
+            onClick={() => this.changeView("home")}> Ga3da commerce </span>
           <span>
-              <input onClick={() => this.changeView("search")} type="text" value="submit" placeholder="Search..." 
+              <input id="searchBar" onClick={() => this.changeView("search")} type="text" value="submit" placeholder="Search..." 
               onChange={this.handleChange} 
-              value={this.state.searchType}/>
-            </span>
-            <span
+              value={this.state.searchType}/></span>
+          <span
+            style={{cursor:"pointer"}}
             className={
               this.state.view === "home" ? "nav-selected" : "nav-unselected"
             }
-            style={{cursor:"pointer"}}
             onClick={() => this.changeView("profile")}> Profile </span>
           <span
+            style={{cursor:"pointer"}}
             className={
               this.state.view === "home" ? "nav-selected" : "nav-unselected"
             }
-            style={{cursor:"pointer"}}
             onClick={() => this.changeView("home")}>  Home </span>
           <span
-            className="nav-unselected"
             style={{cursor:"pointer"}}
+            className={
+            this.state.view === "home" ? "nav-selected" : "nav-unselected"
+            }
             onClick={() => this.changeView("login")}> Login </span>
           <span
-            className="nav-unselected"
             style={{cursor:"pointer"}}
+            className={
+              this.state.view === "home" ? "nav-selected" : "nav-unselected"
+            }
             onClick={() => this.changeView("sign up")}> Sign up </span>
             </div>
         <div>
