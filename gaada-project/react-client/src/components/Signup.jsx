@@ -6,6 +6,7 @@ const Signup=(props)=>{
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [image, setImage] = useState("image");
     const [loggedin, setLoggedin] = useState(false);
 
 
@@ -16,11 +17,11 @@ const Signup=(props)=>{
             username,
             password,
             email,
+            image,
             loggedin
           })
           .then(() => {
-              props.changeView('home')
-              setLoggedin(true);
+              props.changeView('field')
           });
     }
 

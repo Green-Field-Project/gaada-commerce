@@ -41,6 +41,7 @@ app.post('/signup', function(req, res){
   {username: req.body.username,
    password: req.body.password,
    email: req.body.email,
+   image: req.body.image,
    loggedin: req.body.loggedin
   }, function(err, result){
     if(err){
@@ -110,6 +111,15 @@ res.send(item)
   }
 })
 
+app.delete('/user/account/:id', (req, res) =>{
+  User.findOneAndRemove(req.params._id, (err, result)=>{
+    if (err){
+      res.send(err)
+    } else {
+      res.send(result)
+    }
+  })
+})
 
 app.get('/user/loggedin', (req, res)=>{
   User.findOne({loggedin: true}, function(err, result){
