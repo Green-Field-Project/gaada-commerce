@@ -306,8 +306,85 @@ button {
   border: none;
   border-radius: 3px;
   font-family: 'PT Serif', sans-serif;
-  color: #ECF0F1;
-  background-color: #E74C3C;
+  color: black;
+  background-color: #e74d3c;
+  margin :5px;
+}
+
+button:hover {
+  color: rgb(219, 223, 16);
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#loginBtn {
+  background-color: #04AA6D;
+  color: rgb(27, 30, 226);;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 50px;
+}
+
+#signin{
+  color: rgb(27, 120, 226);
+  font-family: cursive;
+  font-weight: bold;
+  font-size:50px;
+}
+
+#signUpBtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 50px;
+}
+
+#cancelBtn{
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+#loginContainer {
+  border-color: black;
+  border-width: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 16px;
+}
+
+#signupContainer {
+  border-color: black;
+  border-width: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 16px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+form {
+  padding: 50px;
+  border: 3px solid #f1f1f1;
+  border-color: rgba(0, 204, 255, 0.582);
+  border-width: 2px;
+  background-color: rgba(172, 255, 47, 0.24)
 }
 
 .post {
@@ -465,13 +542,19 @@ button {
 }
 
 .nav {
-  background-color: #3498DB;
+  background-color: #dba13479;
   margin: 0px;
   padding: 10px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-family: 'Francois One';
+}
+
+#searchBar {
+  padding: 5px;
+  margin-right: 200px;
+  width: 450px;
 }
 
 .nav-selected {
@@ -483,6 +566,7 @@ button {
 }
 
 .nav-unselected {
+  color: black;
   padding: 5px;
   margin-right: 5px;
   font-size: 1.1em;
@@ -528,11 +612,13 @@ button {
   
  .container1 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 40px 0;
+  align-items: center;
 }
 
  .container1 .card1 {
@@ -575,7 +661,7 @@ button {
 }
 
  .container1 .card1 .box1:hover {
-  transform: translateY(-50px);
+  transform: translateY(-20px);
 }
 
  .container1 .card1 .box1:before {

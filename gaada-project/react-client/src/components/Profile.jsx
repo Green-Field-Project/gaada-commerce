@@ -7,15 +7,28 @@ import axios from "axios";
 export default class Profile extends React.Component {
   constructor(props){
     super(props)
+    this.state = {
+      image: "",
+      user: this.props.user
+    }
     this.delete = this.delete.bind(this);
+    this.changeImage = this.changeImage.bind(this);
   }
   
+  changeImage(){
+    axios.put(`/user/image/${this.state.user.id}`, {image: this.state.image})
+    .then(() =>{
+      location.reload() 
+    })
+  }
 
+  // handleChange (e){
+  //   this.setState({image: e.target.value});
+  // }
 
   delete(id){
     axios.delete(`/items/${id}`)
-    .then((res)=>{
-      console.log(res)
+    .then(()=>{
       location.reload()
     })
   }
@@ -27,9 +40,13 @@ export default class Profile extends React.Component {
           <span id="disconnectbtn" style={{cursor:"pointer"}} onClick={this.props.disconnect}> Disconnect </span>
           <span id="deleteAccbtn" style={{cursor:"pointer"}} onClick={this.props.deleteAccount}> Delete Account </span>
           <br /><br />
-          <img className="card-image2" src={this.props.user.image}/>
-          <h5>{this.props.user.username}</h5  >
-          <h6>{this.props.user.email}</h6>
+          <img className="card-image2" src={this.state.user.image}/>
+          <h5>{this.state.user.username}</h5  >
+          <h6>{this.state.user.email}</h6>
+          <div>
+            <input type="text" onChange={(e)=>{this.setState({image: e.target.value})}}/>
+            <button onClick={this.changeImage} >Change profile picture</button>
+          </div>
         </div>
         <br />
         <br />
