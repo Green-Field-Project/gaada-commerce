@@ -20,7 +20,7 @@ handleChangeImage(e){
 }
 
 addImage(){
-    axios.post(`/api/user/${this.props.user.id}`, this.state)
+    axios.put(`/api/user/${this.props.user.id}`, this.state)
     .then((res)=>{
       console.log(res)
     location.reload()

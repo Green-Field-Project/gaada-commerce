@@ -17,7 +17,7 @@ export default class App extends React.Component {
       items: [],
       users: [],
       view: "home",
-      user: null,
+      user: {},
       basket: [],
       serachType:"",
       };
@@ -27,6 +27,7 @@ export default class App extends React.Component {
       this.getUsers = this.getUsers.bind(this);
       this.handleChange = this.handleChange.bind(this);
       this.disconnect = this.disconnect.bind(this);
+      this.deleteAccount = this.deleteAccount.bind(this);
   }
 
   componentDidMount() {
@@ -62,9 +63,16 @@ export default class App extends React.Component {
 
   disconnect() {
     axios.get('/user/disconnect').then(() =>{
-      this.setState({user : null})
+      this.setState({user : {}})
     }).then(() =>{
       this.changeView('home')
+    })
+  }
+
+  deleteAccount(id) {
+    axios.delete(`/user/account/${id}`).then(result=>{
+      console.log("account deleted");
+      location.reload()
     })
   }
 
@@ -90,12 +98,14 @@ export default class App extends React.Component {
       return <Home changeView={this.changeView} items={items} />;
     } else if (view === "login") {
       return <Login changeView={this.changeView} />;
+    } else if (view === "itemDetails") {
+      return <ItemDetails changeView={this.changeView} basket={basket} items={items} />;
     } else if (view === "sign up") {
       return <Signup changeView={this.changeView} />;
     } else if (view === "field") {
       return <Field  changeView={this.changeView} user={user} />;
     } else if (view === "profile") {
-      return <Profile changeView={this.changeView} user={user} items={items} disconnect={this.disconnect} />;
+      return <Profile changeView={this.changeView} disconnect={this.disconnect} deleteAccount={this.deleteAccount} user={user} items={items} />;
     } else if (view === "search") {
       return <Search changeView={this.changeView} filteredItems={filteredItems} basket={basket} />
     } else if (view === "basket") {

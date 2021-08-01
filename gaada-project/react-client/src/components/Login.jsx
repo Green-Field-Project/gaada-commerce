@@ -14,7 +14,7 @@ const Login=(props)=>{
         // e.preventDefault();
         axios.post('/login', {email, password})
         .then(() => {
-            props.changeView('field')
+            location.reload()
         }).catch(err => {
             alert( "wrong pasword/username!");
         })
