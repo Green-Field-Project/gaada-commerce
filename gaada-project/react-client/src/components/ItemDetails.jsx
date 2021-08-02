@@ -48,16 +48,23 @@ this.props.changeView('basket')
       </div>
       
       
-      <div>
-      <img className="card-image" src={this.props.item.imageUrl} alt="item image" />
+      <div className="card">
+      <div className="container1" >
+          <div className="card1">
+    <div className="box1">
+      <div className="content1">
+      <img className="card-image1" src={this.props.item.imageUrl} alt="item image" />
       
       <div className="card-itemDetails">
           <h3>{this.props.item.itemName}</h3>
-          <h5>{this.props.item.itemType}</h5>
-          <h5>{this.props.item.price}</h5>
-          <h5>{this.props.item.itemDescription}</h5>
-          <h5>{this.props.item.quantity}</h5>
-          {/* <button  >Buy it</button>  */}
+          <h6>{this.props.item.itemType}</h6>
+          <h6>{this.props.item.price}</h6>
+          <h6>{this.props.item.itemDescription}</h6>
+          <h6>{this.props.item.quantity}</h6>
+          </div>
+          </div>
+          </div>
+          </div>
       </div>
     </div>
     </div>

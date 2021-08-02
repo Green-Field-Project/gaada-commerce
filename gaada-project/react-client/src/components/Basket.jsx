@@ -21,11 +21,11 @@ class Basket extends React.Component {
       <div>
         {/* {console.log(props.basket)} */}
         {this.props.basket.map((elm, i) => (
-          <div key={i}>
+          <div className="basketContainer" key={i}>
             <h4>{elm.itemName}</h4>
 
             <h4>{elm.price}</h4>
-            <button onClick={() => this.delete()}>XX</button>
+            <button onClick={() => this.delete()}> Cancel Purchase </button>
           </div>
         ))}
         <div>

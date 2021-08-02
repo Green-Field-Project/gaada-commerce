@@ -43,7 +43,7 @@ const Login=(props)=>{
                 <br />
                 <h6>forgot password? </h6>
                 <br />
-                <h6>Dont have an account ? </h6> <h6 style={{cursor:"pointer"}} onClick={()=>{props.changeView('sign up')}}>Register here.</h6>
+                <h6>Dont have an account ? </h6> <h6 style={{cursor:"pointer" , color:"red"}} onClick={()=>{props.changeView('sign up')}}>Register here.</h6>
             </form>
         </div>
     )

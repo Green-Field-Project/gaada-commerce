@@ -78,7 +78,7 @@ export default class Create extends React.Component {
             onChange={(e) => this.handleName(e)}
           />
           <label htmlFor="name" className="form__label">
-             Name
+             {this.state.itemName}
           </label>
           <input
             type="text"
@@ -89,7 +89,7 @@ export default class Create extends React.Component {
             onChange={(e) => this.handleDesc(e)}
           />
           <label htmlFor="name" className="form__label">
-             Description
+             {this.state.itemDescription}
           </label>
           <input
             type="text"
@@ -100,7 +100,7 @@ export default class Create extends React.Component {
             onChange={(e) => this.handleType(e)}
           />
           <label htmlFor="name" className="form__label">
-             Type
+             {this.state.itemType}
           </label>
           <input
             type="text"
@@ -111,7 +111,7 @@ export default class Create extends React.Component {
             onChange={(e) => this.handleImg(e)} 
           />
           <label htmlFor="name" className="form__label">
-             Image
+             {this.state.imageUrl}
           </label>
           <input
             type="text"
@@ -122,7 +122,7 @@ export default class Create extends React.Component {
             onChange={(e) => this.handlePrc(e)}
           />
           <label htmlFor="name" className="form__label">
-             Price
+             {this.state.Price}
           </label>
           <input
             type="text"
@@ -133,7 +133,7 @@ export default class Create extends React.Component {
             onChange={(e) => this.handleQntt(e)}
           />
           <label htmlFor="name" className="form__label">
-          Quantity
+          {this.state.Quantity}
           </label>
         </div>
 

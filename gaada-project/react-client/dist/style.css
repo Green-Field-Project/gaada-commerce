@@ -245,6 +245,18 @@
     letter-spacing: 5px;
   }
 
+  .basketContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+    display: block;
+    border: 2px outset rgba(29, 252, 0, 0.315);
+    background-color: lightblue;
+    text-align: center;
+  }
 
 body {
   font-family: 'PT Serif', sans-serif;
@@ -255,7 +267,11 @@ body {
 
 }
 
-
+#userInfo {
+  /* display: inline-block; */
+  position: relative;
+  justify-content:center;
+}
 
 h2 {
   color: #2C3E50;
@@ -322,6 +338,10 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+#changeImagebar{
+  width: 150px;
 }
 
 #loginBtn {
@@ -622,6 +642,8 @@ form {
 }
 
  .container1 .card1 {
+  display: flex;
+  flex-direction: row;
   position: relative;
   min-width: 320px;
   height: 440px;
@@ -693,6 +715,14 @@ form {
   z-index: 1;
   transition: 0.5s;
   margin-bottom: 15px;
+}
+
+.container1 .card1 .box1 .content1 h6 {
+  font-size: 1.1rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 5px;
 }
 
  .container1 .card1 .box1 .content1 p {
