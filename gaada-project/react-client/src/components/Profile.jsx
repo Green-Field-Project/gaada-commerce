@@ -22,10 +22,6 @@ export default class Profile extends React.Component {
     })
   }
 
-  // handleChange (e){
-  //   this.setState({image: e.target.value});
-  // }
-
   delete(id){
     axios.delete(`/items/${id}`)
     .then(()=>{
@@ -40,11 +36,13 @@ export default class Profile extends React.Component {
           <span id="disconnectbtn" style={{cursor:"pointer"}} onClick={this.props.disconnect}> Disconnect </span>
           <span id="deleteAccbtn" style={{cursor:"pointer"}} onClick={this.props.deleteAccount}> Delete Account </span>
           <br /><br />
+          <div id="userInfo">
           <img className="card-image2" src={this.state.user.image}/>
-          <h5>{this.state.user.username}</h5  >
-          <h6>{this.state.user.email}</h6>
+          <h3>{this.state.user.username}</h3  >
+          <h4>{this.state.user.email}</h4>
+          </div>
           <div>
-            <input type="text" onChange={(e)=>{this.setState({image: e.target.value})}}/>
+            <input id="changeImagebar" type="text" onChange={(e)=>{this.setState({image: e.target.value})}}/>
             <button onClick={this.changeImage} >Change profile picture</button>
           </div>
         </div>
